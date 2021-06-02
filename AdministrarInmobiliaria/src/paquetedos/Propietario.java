@@ -4,11 +4,51 @@
  * and open the template in the editor.
  */
 package paquetedos;
-
+import java.io.Serializable;
 /**
  *
  * @author reroes
  */
-public class Propietario {
+public class Propietario implements Serializable {
+    private String nombre;
+    private String apellido;
+    private String identificacion;
     
+    
+    public Propietario(){
+        
+    }
+    public Propietario(String nom, String ape, String id){
+        nombre = nom;
+        apellido = ape;
+        identificacion = id;
+    }
+    
+    public void establecerNombre(String c) {
+        nombre = c;
+    }
+
+    public void establecerApellido(String c) {
+        apellido = c;
+    }
+
+    public void establecerIdentificacion(String c) {
+        identificacion = c;
+    }
+
+    // public void establecerValorFactura(){
+    
+
+    public String obtenerNombre() {
+        return nombre;
+    }
+
+    public String obtenerApellido() {
+        return apellido;
+    }
+
+    public String obtenerIdentificacion() {
+        return identificacion;
+    }
+
 }
